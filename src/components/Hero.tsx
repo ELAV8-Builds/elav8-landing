@@ -2,31 +2,11 @@ import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { MessageSquare, ArrowRight } from 'lucide-react';
 
-const stats = [
-  { value: 1000, suffix: '+', label: 'Teams' },
-  { value: 50, suffix: 'M+', label: 'Suggestions' },
-  { value: 99.9, suffix: '%', label: 'Uptime' },
+const highlights = [
+  { text: '6+', label: 'Integrations' },
+  { text: 'Push', label: 'Based Delivery' },
+  { text: 'Zero', label: 'Data Stored' },
 ];
-
-function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
-  return (
-    <motion.span
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-    >
-      <motion.span
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-      >
-        {value.toLocaleString()}
-      </motion.span>
-      {suffix}
-    </motion.span>
-  );
-}
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -100,15 +80,12 @@ export default function Hero() {
           animate={inView ? 'visible' : 'hidden'}
           className="mt-16 flex items-center justify-center gap-8 sm:gap-16"
         >
-          {stats.map((stat, idx) => (
-            <div key={stat.label} className="text-center">
+          {highlights.map((item) => (
+            <div key={item.label} className="text-center">
               <div className="text-2xl sm:text-3xl font-bold text-white">
-                <AnimatedCounter value={stat.value} suffix={stat.suffix} />
+                {item.text}
               </div>
-              <div className="mt-1 text-sm text-surface-500">{stat.label}</div>
-              {idx < stats.length - 1 && (
-                <span className="hidden" aria-hidden="true" />
-              )}
+              <div className="mt-1 text-sm text-surface-500">{item.label}</div>
             </div>
           ))}
         </motion.div>

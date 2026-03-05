@@ -10,6 +10,7 @@ const features = [
     title: 'Personalized Delivery',
     description:
       'Each team member gets AI suggestions matched to their unique communication style. Your tone, your length, your emoji preferences.',
+    link: '#how-it-works',
   },
   {
     icon: Puzzle,
@@ -18,6 +19,7 @@ const features = [
     title: 'Smart Integrations',
     description:
       'Connect Gmail, Google Docs, Notion, Freshdesk \u2014 or build custom API integrations in minutes. Data flows to the right person at the right time.',
+    link: '#integrations',
   },
   {
     icon: Shield,
@@ -26,6 +28,7 @@ const features = [
     title: 'Enterprise Security',
     description:
       'Zero message storage. AES-256 encryption. Audit logging. Role-based access control. Built for compliance from day one.',
+    link: '#faq',
   },
   {
     icon: Brain,
@@ -34,6 +37,7 @@ const features = [
     title: 'Multi-Tier AI',
     description:
       'Fast classification with Haiku. Deep reasoning with Opus. The right AI model for every task \u2014 fast when it needs to be, smart when it matters.',
+    link: '#pricing',
   },
 ];
 
@@ -135,7 +139,7 @@ export default function Features() {
 
                 {/* Learn more link */}
                 <a
-                  href="#"
+                  href={feature.link}
                   className="inline-flex items-center gap-1.5 text-sm text-primary-400 hover:text-primary-300 transition-colors group/link"
                 >
                   Learn more

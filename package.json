@@ -2,6 +2,9 @@
   "name": "elav8-landing",
   "private": true,
   "version": "1.0.0",
+  "description": "ELAV8 — AI-powered response engine for Slack. Landing page.",
+  "author": "ELAV8 Builds",
+  "license": "UNLICENSED",
   "type": "module",
   "scripts": {
     "dev": "vite",

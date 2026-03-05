@@ -140,7 +140,10 @@ export default function Pricing() {
               </ul>
 
               {/* CTA */}
-              <a href="#" className={`${tier.ctaStyle} w-full text-center text-sm`}>
+              <a
+                href={tier.name === 'Enterprise' ? 'mailto:hello@elav8.dev?subject=ELAV8%20Enterprise%20Inquiry' : '#faq'}
+                className={`${tier.ctaStyle} w-full text-center text-sm`}
+              >
                 {tier.cta}
               </a>
             </motion.div>
